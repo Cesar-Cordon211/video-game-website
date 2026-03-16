@@ -3,122 +3,129 @@
 }
 
 html {
-    background-color: gray;
-    background-image: url("world.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: Verdana, Geneva, sans-serif;
+   background-color: gray;
+   background-image: url("world.jpg");
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   font-family: Verdana, Geneva, sans-serif;
 }
 
 body {
-    background-color: rgb(192,192,192);
-    box-shadow: rgb(51, 51, 51) 20px 0px 40px, rgb(51, 51, 51) -20px 0px 40px,
-                inset rgb(51, 21, 21) 0px 0px 40px;
-    border-left: 3px solid rgb(51, 51, 51);
-    border-right: 3px solid rgb(51, 51, 51);
-    margin: 0px auto;
-    max-width: 1020px;  
-    width: 100%;
+   background-color: rgb(192,192,192);
+   box-shadow: rgb(51, 51, 51) 20px 0px 40px, rgb(51, 51, 51) -20px 0px 40px,
+               inset rgb(51, 21, 21) 0px 0px 40px;
+   border-left: 3px solid rgb(51, 51, 51);
+   border-right: 3px solid rgb(51, 51, 51);
+   min-height: 100%;  
+   margin: 0px auto;
+   min-width: 320px;
+   max-width: 1020px;  
+   width: 100%;
 }
 
-/* Row and Column Fixes */
+/* Row and Column Layout */
 .row {
     display: flex;
     flex-wrap: wrap; 
-    width: 100%;
 }
 
 .column {
-    flex: 1; 
-    min-width: 300px; 
-    padding: 15px;
-}
-
-/* Image scaling fix */
-.game-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-}
-
-/* Header & Nav */
-body > header {
-    border-bottom: 10px solid rgb(70,130,180);
-    display: flex;
-    flex-flow: row wrap; 
-    align-items: flex-end; 
-    margin-bottom: 30px;
-    background-color: rgba(0,0,0,0.5); 
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: flex-end;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
+    flex: 50%; 
     padding: 10px;
-    display: block;
 }
 
+/* Original Title style with added padding */
+.title {
+    color: rgb(128,0,0);
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 50px; 
+}
 
 p {
     background-color: rgb(70,130,180);
-    line-height: 1.6;
-    font-size: 18px; 
-    padding: 15px;
-    margin-bottom: 10px;
+    line-height: 2;
+    font-size: 25px;
+    text-indent: 30px;
 }
 
-.title {
-    color: rgb(128,0,0);
-    font-size: 45px;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 40px;
+.drop {
+    float: left;
+    width: 0.7em;
+    font-size: 400%;
+    font-family: algerian, courier;
+    line-height: 80%;
 }
 
-.ring, .mc {
-    display: block; 
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-/* Footer Specifics */
-footer {
-    background: linear-gradient(to bottom, rgb(70,130,180), black);   
-    padding: 20px;
+.greenbackground {
+    background-color: rgb(0,102,51);
     color: white;
+}
+
+.bluebackground {
+    background-color: rgb(8, 108, 116);
+    color: white;
+}
+
+/* Heading 2 styles */
+h2 {
+    color: rgb(139,69,19);
+    font-size: 40px;
+    line-height: 2;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/* Specific Game Headings */
+.ring {
+    color: rgb(239,139,9);
+    font-size: 50px;
+    display: inline-block;
+    width: 100%;
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: rgb(0,102,51);
+}
+
+.mc {
+    color: white;
+    font-size: 50px;
+    display: inline-block;
+    width: 100%;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0,206,209);
+}
+
+footer {
+    color: white;   
+    background: linear-gradient(to bottom, rgb(70,130,180), black);   
+    padding: 20px 40px;
 }
 
 footer h1 {
-    color: rgb(255, 241, 147);   
-    font-size: 1.2em;
-    margin-bottom: 10px;
+   color: rgb(255, 241, 147);   
+   font-size: 1em;
+   margin: 10px 0px;
 }
 
-footer p.footer-info {
-    background-color: transparent; 
-    font-size: 16px;              
+footer .footer-info {
+    background-color: transparent;
+    font-size: 16px;
     line-height: 1.4;
-    text-indent: 0;               
+    text-indent: 0;
     color: white;
-    padding: 0;
 }
 
 footer a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    margin-bottom: 5px;
+   display: block;
+   color: white;
+   text-decoration: none;
+   font-size: 0.9em;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
 }
