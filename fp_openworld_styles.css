@@ -83,6 +83,7 @@ p {
     font-size: 45px;
     text-align: center;
     text-decoration: underline;
+    margin-bottom: 40px;
 }
 
 .ring, .mc {
@@ -99,7 +100,25 @@ footer {
     color: white;
 }
 
-.footer-info {
-    background: none; 
-    font-size: 16px;
+footer h1 {
+    color: rgb(255, 241, 147);   
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer p.footer-info {
+    background-color: transparent; 
+    font-size: 16px;              
+    line-height: 1.4;
+    text-indent: 0;               
+    color: white;
+    padding: 0;
+}
+
+footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
