@@ -1,7 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-
+/* HTML and Body styles */
 html {
    background-color: gray;
    background-image: url("world.jpg");
@@ -12,9 +9,9 @@ html {
    font-family: Verdana, Geneva, sans-serif;
 }
 
-body {
+   body {
    background-color: rgb(192,192,192);
-   box-shadow: rgb(51, 51, 51) 20px 0px 40px, rgb(51, 51, 51) -20px 0px 40px,
+   box-shadow: rgb(51, 51, 51) 20px 0px 40px,  rgb(51, 51, 51) -20px 0px 40px,
                inset rgb(51, 21, 21) 0px 0px 40px;
    border-left: 3px solid rgb(51, 51, 51);
    border-right: 3px solid rgb(51, 51, 51);
@@ -25,31 +22,100 @@ body {
    width: 100%;
 }
 
-/* Row and Column Layout */
-.row {
-    display: flex;
-    flex-wrap: wrap; 
+/* Header styles */
+
+body > header {
+   border-bottom: 10px solid rgb(70,130,180);
+   color: white;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap; 
+   -webkit-align-items: flex-end;
+   align-items: flex-end; 
+   margin-bottom: 30px;
+   width: 100%;
 }
 
-.column {
-    flex: 50%; 
-    padding: 10px;
+
+body > header > img {
+   display: block;
+   -webkit-flex: 0 1 200px;
+   flex: 0 1 200px;
 }
 
-/* Original Title style with added padding */
+
+/* Navigation list */
+body > header > nav {
+   -webkit-flex: 1 1 441px;
+   flex: 1 1 441px;
+}
+
+body > header > nav > ul {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   -webkit-justify-content: flex-end;
+   justify-content: flex-end;
+}
+
+body > header > nav > ul li {
+   -webkit-flex: 0 1 auto;
+   flex: 0 1 auto;
+}
+
+body > header > nav > ul > li {
+  font-size: 1.2em; 
+   line-height: 1.2em; 
+   height: 1.2em;
+   padding: 50px 10px;
+}
+
+body > header > nav > ul > li > a {
+   color: white;
+   display: block;
+   width: 100%;
+   text-align:center;
+}
+
+header nav ul li {
+   font-size: 1.2em; 
+   line-height: 2.3em; 
+   height: 2.3em;
+   padding: 0px 10px;
+}
+
+header nav ul li a {
+   color: white;
+   display: block;
+   width: 100%;
+}
+
+header nav ul li a:hover {
+   color: rgb(30,144,255);
+}
+
+a#navicon {
+   display: none;
+}
+
+/* Line Break */
+.break {
+  white-space: pre-wrap;
+}
+
+/* Section */
+section {
+   margin: 30px 3%;
+}
+
+/* Title style */
 .title {
-    color: rgb(128,0,0);
-    font-size: 50px;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 50px; 
-}
-
-p {
-    background-color: rgb(70,130,180);
-    line-height: 2;
-    font-size: 25px;
-    text-indent: 30px;
+	color: rgb(128,0,0);
+	font-size: 50px;
+	text-align: center;
+	text-decoration: underline;
 }
 
 .drop {
@@ -60,47 +126,90 @@ p {
     line-height: 80%;
 }
 
+/* Heading 2 styles */
+h2 {
+	color: rgb(139,69,19);
+	font-size: 40px;
+	line-height: 2;
+	text-align: center;
+	margin: 10px 0px;
+}
+
+ h2:first-of-type {
+   margin-top: 0px;
+   text-decoration: none;
+}
+
+/* Styles for Elden Ring */
+.ring  {
+	color: rgb(239,139,9);
+	font-size: 50px;
+	text-decoration: none;
+	display: inline;
+	 -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: rgb(0,102,51);
+}
+
+/* Styles for Minecraft */
+.mc  {
+	color: white;
+	font-size: 50px;
+	text-decoration: none;
+	display: inline;
+	-webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(0,206,209);
+}
+
+/* Heading 3 styles */
+h3 {
+	color: white;
+	text-decoration: bold;
+	text-align: center;
+	font-size: 30px;
+	 -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255,140,0);
+	text-indent: 25px;	
+}
+
+/* Heading 4 styles */
+h4 {
+	color: rgb(0,139,139);
+	font-size: 20px;
+	text-shadow: 2px 2px black;
+	font-size: 15px;
+	text-align: center;
+}
+
+/* Paragraph styles */
+ p {
+	background-color: rgb(70,130,180);
+	line-height: 2;
+	font-size: 25px;
+	text-indent: 30px;
+ }
+ 
 .greenbackground {
-    background-color: rgb(0,102,51);
-    color: white;
+	background-color: rgb(0,102,51);
+	color: white;
 }
 
 .bluebackground {
-    background-color: rgb(8, 108, 116);
-    color: white;
+	background-color: rgb(8, 108, 116);
+	color: white;
 }
 
-/* Heading 2 styles */
-h2 {
-    color: rgb(139,69,19);
-    font-size: 40px;
-    line-height: 2;
-    text-align: center;
-    margin: 10px 0px;
-}
-
-/* Specific Game Headings */
-.ring {
-    color: rgb(239,139,9);
-    font-size: 50px;
-    display: inline-block;
-    width: 100%;
-    -webkit-text-stroke-width: 2.5px;
-    -webkit-text-stroke-color: rgb(0,102,51);
-}
-
-.mc {
-    color: white;
-    font-size: 50px;
-    display: inline-block;
-    width: 100%;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(0,206,209);
-}
-
+/* Footer styles */   
 footer {
-    color: white;   
-    background: linear-gradient(to bottom, rgb(70,130,180), black);   
+   color: white;    
+   background: linear-gradient(to bottom, rgb(70,130,180), black);   
+   -moz-column-width: 500px;
+   -webkit-column-width: 500px;
+    column-width: 500px;
+
+   -moz-column-gap: 25px;
+   -webkit-column-gap: 25px;
+    column-gap: 25px;
+    
     padding: 20px 40px;
 }
 
@@ -110,12 +219,9 @@ footer h1 {
    margin: 10px 0px;
 }
 
-footer .footer-info {
-    background-color: transparent;
-    font-size: 16px;
-    line-height: 1.4;
-    text-indent: 0;
-    color: white;
+footer h1:first-of-type {
+   margin-top: 0px;
+   text-decoration: none;
 }
 
 footer a {
@@ -125,7 +231,23 @@ footer a {
    font-size: 0.9em;
 }
 
+footer a:hover {
+   text-decoration: underline;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.column {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
 .column img {
-    max-width: 100%;
-    height: auto;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
